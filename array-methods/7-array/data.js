@@ -50,7 +50,7 @@ const got = {
           wikiLink: "http://gameofthrones.wikia.com/wiki/Brandon_Stark"
         },
         {
-          name: "Rickon Stark",
+          name: "Rickon Stark Upper",
           description: "Son of Eddard and Catelyn Stark - Direwolf: Shaggydog",
           image:
             "http://cheatsheetworld.com/img/entertainment/game-of-thrones/game-of-thrones-rickon-stark.jpg",
