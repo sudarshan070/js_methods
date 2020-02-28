@@ -9,94 +9,37 @@
   <body>
     <script src="./data.js"></script>
     <script>
-      // Go through todo.md before start solving.
-      // function countAllPeople() {
-      //   // your code goes here
-      //   return got.houses.reduce((acc, cv) => {
-      //     acc = acc + cv.people.length;
-      //     return acc;
-      //   }, 0);
-      // }
       function countAllPeople() {
         // your code goes here
-        return got.houses.reduce((acc, cv) => acc + cv.people.length, 0);
+        console.log(got);
       }
 
       function peopleByHouses() {
         // your code goes here
-        return got.houses.reduce((acc, cv) => {
-          acc[cv.name] = cv.people.length;
-          return acc;
-        }, {});
       }
 
       function everyone() {
         // your code goes here
-        return got.houses.reduce((acc, cv) => {
-          acc = acc.concat(cv.people.map(single => single.name));
-          return acc;
-        }, []);
       }
 
       function nameWithS() {
-        return got.houses
-          .reduce((acc, cv) => {
-            acc = acc.concat(cv.people.map(single => single.name));
-            return acc;
-          }, [])
-          .filter(name => name.toLowerCase().includes("s"));
         // your code goes here
       }
 
       function nameWithA() {
         // your code goes here
-        return got.houses
-          .reduce((acc, cv) => {
-            acc = acc.concat(cv.people.map(single => single.name));
-            return acc;
-          }, [])
-          .filter(name => name.toLowerCase().includes("a"));
       }
 
       function surnameWithS() {
-        return got.houses
-          .reduce((acc, cv) => {
-            acc = acc.concat(cv.people.map(single => single.name));
-            return acc;
-          }, [])
-          .filter(name =>
-            name
-              .split(" ")
-              .pop()
-              .toLowerCase()
-              .startsWith("s")
-          );
         // your code goes here
       }
 
       function surnameWithA() {
         // your code goes here
-        return got.houses.reduce((acc, cv) => {
-          acc = acc.concat(
-            cv.people
-              .map(single => single.name)
-              .filter(name =>
-                name
-                  .split(" ")
-                  .pop()
-                  .startsWith("A")
-              )
-          );
-          return acc;
-        }, []);
       }
 
       function peopleNameOfAllHouses() {
         // your code goes here
-        return got.houses.reduce((acc, cv) => {
-          acc[cv.name] = cv.people.map(single => single.name);
-          return acc;
-        }, {});
       }
 
       // Testing your result after writing your function
@@ -111,7 +54,7 @@
       // Output should be
       //["Eddard "Ned" Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon "Bran" Stark", "Rickon Stark", "Jon Snow", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Queen Cersei (Lannister) Baratheon", "King Robert Baratheon", "Stannis Baratheon", "Renly Baratheon", "Joffrey Baratheon", "Tommen Baratheon", "Myrcella Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Balon Greyjoy", "Theon Greyjoy", "Yara Greyjoy", "Margaery (Tyrell) Baratheon", "Loras Tyrell", "Catelyn (Tully) Stark", "Lysa (Tully) Arryn", "Edmure Tully", "Brynden Tully", "Olenna (Redwyne) Tyrell", "Walder Frey", "Jon Arryn", "Khal Drogo"]
 
-      console.log(nameWithS(), "withs");
+      console.log(nameWithS(), "with s");
       // Output should be
       // ["Eddard "Ned" Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon "Bran" Stark", "Rickon Stark", "Jon Snow", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Queen Cersei (Lannister) Baratheon", "Stannis Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Loras Tyrell", "Catelyn (Tully) Stark", "Lysa (Tully) Arryn"]
 
